@@ -21,7 +21,7 @@ const Header = (): JSX.Element => {
             Sobre mí
           </Link>
           <Link href="/user/edit" className="hover:text-red-500 text-lg font-bold">
-            Mis Repos
+            Mis Proyectos
           </Link>
           <a
             href="https://www.instagram.com/cast_fxbr1?igsh=MWN5N3R2NW5weWw3aw%3D%3D&utm_source=qr"
