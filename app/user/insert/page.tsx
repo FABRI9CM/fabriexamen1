@@ -15,12 +15,8 @@ export default function Insert() {
         name="Dilan Chavarria Valdez"
         ubication="Costa Rica, Puntarenas, Golfito, Golfito"
         email="dilanchava48@gmail.com"
-        text="Soy  persona activa que puede resolver problemas en el momento y que no tiene problemas con los demás colaboradores en el trabajo."
+        text="Soy una persona activa que puede resolver problemas en el momento y que no tiene problemas con los demás colaboradores en el trabajo."
       />
-
-
-
-
     </div>
   );
 }
