@@ -1,9 +1,9 @@
-/* page.module.css */
+
 
 .container {
     position: relative;
     min-height: 100vh;
-    background-image: url('/IMAGE4.jpg'); 
+    background-image: url('/fondo1.webp'); 
     background-size: cover;
     background-position: center;
   }
