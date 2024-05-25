@@ -1,12 +1,11 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {};
-
-export default nextConfig;
-module.exports = {
+const nextConfig = {
     webpack: (config, { isServer }) => {
       if (!isServer) {
         config.resolve.fallback = { fs: false, module: false };
       }
       return config;
-    }
+    },
   };
+  
+  export default nextConfig;
+  
