@@ -1,0 +1,40 @@
+.carrusel {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    max-width: 80%;
+    margin: 0 auto;
+  }
+  
+  .repoCard {
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  .repoCard h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  
+  .repoCard p {
+    font-size: 1em;
+    color: #666;
+  }
+  
+  .repoCard a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #0070f3;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .repoCard a:hover {
+    background-color: #005bb5;
+  }
+  

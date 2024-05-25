@@ -8,7 +8,7 @@ export default function Footer() {
           <div className="mb-4 md:mb-0">
             <h3 className="text-lg font-bold mb-2">Datos de contacto</h3>
             <p>Fabricio Castro Martínez</p>
-            <p>Teléfono: 8427-9801</p>
+            <p>Celular: 8447-6702</p>
             <p>Email: fcastromar23@gmail.com</p>
           </div>
           <img src="logo2.png" alt="Imagen del footer" className="h-14 mr-3" />

@@ -37,7 +37,7 @@ export default function Hero2(props: Hero2Props) {
         <h2 className="text-5xl font-bold text-red-500 mb-4">{props.title}</h2>
         <div className="max-w-xl mx-auto p-6 bg-gray-800 bg-opacity-90 rounded-lg shadow-lg space-y-6">
           <div>
-            <h3 className="text-2xl font-semibold text-red-500 mb-2">Información Personal</h3>
+            <h3 className="text-2xl font-semibold text-red-500 mb-2">¿Quién soy?</h3>
             <p className="text-lg text-white">Nombre: {props.name}</p>
             <p className="text-lg text-white">Ubicación: {props.ubication}</p>
             <p className="text-lg text-white">Correo Electrónico: {props.email}</p>

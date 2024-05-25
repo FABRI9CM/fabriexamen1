@@ -1,55 +1,56 @@
-// components/Carrusel.tsx
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
-import './carrusel.css';
 
-interface Project {
+'use client';
+
+import { useEffect, useState } from 'react';
+import axios from 'axios';
+import Slider from 'react-slick';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import styles from './Carrusel.module.css'; 
+
+interface Repo {
   id: number;
   name: string;
-  html_url: string;
   description: string;
+  html_url: string;
 }
 
-const Carrusel: React.FC = () => {
-  const [projects, setProjects] = useState<Project[]>([]);
-  const [currentIndex, setCurrentIndex] = useState(0);
+const Carrusel = () => {
+  const [repos, setRepos] = useState<Repo[]>([]);  
 
   useEffect(() => {
-    const fetchProjects = async () => {
+    const fetchRepos = async () => {
       try {
         const response = await axios.get('https://api.github.com/users/FABRI9CM/repos');
-        setProjects(response.data);
+        setRepos(response.data);
       } catch (error) {
-        console.error('Error fetching GitHub projects:', error);
+        console.error('Error fetching repos:', error);
       }
     };
 
-    fetchProjects();
+    fetchRepos();
   }, []);
 
-  const nextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % projects.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + projects.length) % projects.length);
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1
   };
 
   return (
-    <div className="carrusel">
-      {projects.length > 0 && (
-        <>
-          <div className="carrusel-item">
-            <h3>{projects[currentIndex].name}</h3>
-            <p>{projects[currentIndex].description}</p>
-            <a href={projects[currentIndex].html_url} target="_blank" rel="noopener noreferrer">
-              Ver en GitHub
-            </a>
+    <div className={styles.carrusel}>
+      <h2>Mis Repositorios</h2>
+      <Slider {...settings}>
+        {repos.map(repo => (
+          <div key={repo.id} className={styles.repoCard}>
+            <h3>{repo.name}</h3>
+            <p>{repo.description}</p>
+            <a href={repo.html_url} target="_blank" rel="noopener noreferrer">Ver en GitHub</a>
           </div>
-          <button onClick={prevSlide}>Prev</button>
-          <button onClick={nextSlide}>Next</button>
-        </>
-      )}
+        ))}
+      </Slider>
     </div>
   );
 };
