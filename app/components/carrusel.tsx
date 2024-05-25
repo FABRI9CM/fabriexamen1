@@ -41,7 +41,7 @@ const Carrusel = () => {
 
   return (
     <div className={styles.carrusel}>
-      <h2>Mis Repositorios</h2>
+      <h2> </h2>
       <Slider {...settings}>
         {repos.map(repo => (
           <div key={repo.id} className={styles.repoCard}>

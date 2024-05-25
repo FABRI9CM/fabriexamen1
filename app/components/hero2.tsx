@@ -38,36 +38,38 @@ export default function Hero2(props: Hero2Props) {
         <div className="max-w-xl mx-auto p-6 bg-gray-800 bg-opacity-90 rounded-lg shadow-lg space-y-6">
           <div>
             <h3 className="text-2xl font-semibold text-red-500 mb-2">¿Quién soy?</h3>
-            <p className="text-lg text-white">Nombre: {props.name}</p>
-            <p className="text-lg text-white">Ubicación: {props.ubication}</p>
+            <p className="text-lg text-white">Mi Nombre: {props.name}</p>
+            <p className="text-lg text-white">¿De donde soy?: {props.ubication}</p>
             <p className="text-lg text-white">Correo Electrónico: {props.email}</p>
           </div>
           <div>
-            <h3 className="text-2xl font-semibold text-red-500 mb-2">Habilidades</h3>
+            <h3 className="text-2xl font-semibold text-red-500 mb-2">Capacidades
+</h3>
             <ul className="list-disc list-inside text-lg text-white">
-              <li>Sabe hacer arroz</li>
-              <li>Sabe hacer huevo frito</li>
-              <li>Sabe hablar lesco</li>
-              <li>Sabe cómo ser su propio jefe</li>
+              <li>Tecnico en Redes y Comunicaciones</li>
+              <li>Tecnico en Programador y Desarrollador Web</li>
+              <li>Manejo 5 idiomas</li>
+              <li>Yo Resuelvo</li>
             </ul>
           </div>
           <div>
-            <h3 className="text-2xl font-semibold text-red-500 mb-2">Recomendaciones</h3>
+            <h3 className="text-2xl font-semibold text-red-500 mb-2">¿A quién recomiendo?</h3>
             <ul className="list-disc list-inside text-lg text-white">
-              <li>Mark Zuckerberg</li>
-              <li>Barack Obama</li>
-              <li>Cristiano Ronaldo</li>
-              <li>Luis Barquero Villalobos</li>
-              <li>Neil Armstrong</li>
+              <li>SibajaGod</li>
+              <li>Chetosabe</li>
+              <li>La soda de Dilan</li>
+              <li>Cesarhacker</li>
+              <li>JP Maestro pokemon</li>
+              <li>Tony(solo en el futbol)</li>
             </ul>
           </div>
           <div>
             <h3 className="text-2xl font-semibold text-red-500 mb-2">Experiencias Laborales</h3>
             <ul className="list-disc list-inside text-lg text-white">
-              <li>Amigo del chino quien creo la Abaco</li>
-              <li>Compañero de Neil Armstrong</li>
-              <li>Compañero de cuarto de Lionel Messi</li>
-              <li>Amigo de Juan Santamaria</li>
+              <li>BARBERIA </li>
+              <li>COCINA</li>
+              <li>Trabajos con Noguera teacher</li>
+              <li>Contrateme necesito brete mae</li>
             </ul>
           </div>
           <div>

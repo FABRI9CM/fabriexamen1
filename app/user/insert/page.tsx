@@ -12,10 +12,10 @@ export default function Insert() {
         imgData2={galleryImg2}
         imgAlt2="Fondo"
         title="Sobre mí"
-        name="Dilan Chavarria Valdez"
-        ubication="Costa Rica, Puntarenas, Golfito, Golfito"
-        email="dilanchava48@gmail.com"
-        text="Soy una persona activa que puede resolver problemas en el momento y que no tiene problemas con los demás colaboradores en el trabajo."
+        name="Fabricio Castro pero me puedes decir Fabri"
+        ubication="Soy de Costa Rica, Puntarenas, mi lugar de origen es Buenos Aires pero vivo actualmente en Golfito"
+        email="fcastromar23@gmail.com"
+        text="Aparte de lo laboral, soy una persona que le gusta mucho el deporte y super dedicado en lo que me gusta hacer, y tengo muy presente los valores de solidaridad y humildad."
       />
     </div>
   );
