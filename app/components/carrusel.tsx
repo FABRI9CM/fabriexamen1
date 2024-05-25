@@ -1,26 +1,57 @@
-'use client';
+// components/Carrusel.tsx
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import './carrusel.css';
 
-import React, { useEffect } from 'react';
-import { loadRepositories } from './Utils';
+interface Project {
+  id: number;
+  name: string;
+  html_url: string;
+  description: string;
+}
 
-export default function Carrusel(){
+const Carrusel: React.FC = () => {
+  const [projects, setProjects] = useState<Project[]>([]);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
   useEffect(() => {
+    const fetchProjects = async () => {
+      try {
+        const response = await axios.get('https://api.github.com/users/FABRI9CM/repos');
+        setProjects(response.data);
+      } catch (error) {
+        console.error('Error fetching GitHub projects:', error);
+      }
+    };
 
-      loadRepositories('project-carousel');
-      
-      
-    
+    fetchProjects();
   }, []);
+
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % projects.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + projects.length) % projects.length);
+  };
+
   return (
-    <div className="w-full bg-gradient-to-r from-gray-950 to-gray-500">
-      <h2 className="text-white shadow-lg shadow-orange-500/50 text-4xl font-bold mb-4 ">Mis Proyectos</h2>
-      <div className="bg-gradient-to-r from-gray-950 to-gray-500 flex overflow-x-auto snap-x snap-mandatory space-x-4" id="project-carousel">
-        
-        {
-      
-        }
-      </div>
+    <div className="carrusel">
+      {projects.length > 0 && (
+        <>
+          <div className="carrusel-item">
+            <h3>{projects[currentIndex].name}</h3>
+            <p>{projects[currentIndex].description}</p>
+            <a href={projects[currentIndex].html_url} target="_blank" rel="noopener noreferrer">
+              Ver en GitHub
+            </a>
+          </div>
+          <button onClick={prevSlide}>Prev</button>
+          <button onClick={nextSlide}>Next</button>
+        </>
+      )}
     </div>
   );
 };
 
+export default Carrusel;
